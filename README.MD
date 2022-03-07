@@ -5,11 +5,11 @@
 
 
 ### Technologies and libraries used:
-    #### Server:
-        * Node.js/Express
+####Server:
+    * Node.js/Express
         * MongoDB/Mongoose for Database
         * JsonWebToken for auth
         * BcryptJS for hashing
 
-    #### Client
+  #### Client
         * Node.js/Express
