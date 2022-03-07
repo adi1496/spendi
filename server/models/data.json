@@ -1,0 +1,144 @@
+{
+    "balance": -683.06,
+    "monthIncomesValue": 415,
+    "monthExpensesValue": 1098.06,
+    "monthExpensesPercentage": 264.59,
+    "incomes": [
+        {
+            "name": "salary",
+            "description": "Transferta",
+            "curency": "€",
+            "id": 1646479344286,
+            "value": 415,
+            "type": "+"
+        }
+    ],
+    "expenses": [
+        {
+            "type": "-",
+            "curency": "€",
+            "id": 1646145533229,
+            "description": "Eat restaurant Bravisol",
+            "name": "food",
+            "percent": 258.18,
+            "value": 13
+        },
+        {
+            "percent": 258.18,
+            "id": 1646145573154,
+            "description": "Eat restaurant Bravisol",
+            "type": "-",
+            "curency": "€",
+            "value": 16,
+            "name": "food"
+        },
+        {
+            "description": "MC Donald’s",
+            "curency": "€",
+            "name": "food",
+            "percent": 258.18,
+            "type": "-",
+            "id": 1646212343835,
+            "value": 7.5
+        },
+        {
+            "percent": 258.18,
+            "value": 14.3,
+            "name": "food",
+            "id": 1646302018090,
+            "type": "-",
+            "description": "On the road Comelit",
+            "curency": "€"
+        },
+        {
+            "id": 1646302095124,
+            "curency": "€",
+            "value": 7.99,
+            "description": "Spotify",
+            "type": "-",
+            "percent": 258.18,
+            "name": "bills"
+        },
+        {
+            "curency": "€",
+            "id": 1646302105102,
+            "type": "-",
+            "percent": 258.18,
+            "value": 11.99,
+            "name": "bills",
+            "description": "Netflix"
+        },
+        {
+            "name": "food",
+            "curency": "€",
+            "value": 14.3,
+            "type": "-",
+            "percent": 258.18,
+            "id": 1646372718242,
+            "description": "On the road Comelit"
+        },
+        {
+            "percent": 258.18,
+            "curency": "€",
+            "id": 1646372744133,
+            "type": "-",
+            "name": "food",
+            "value": 7.1,
+            "description": "MC Donalsd’s"
+        },
+        {
+            "curency": "€",
+            "name": "rent",
+            "percent": 258.18,
+            "value": 234,
+            "description": "Hotel Osimo",
+            "type": "-",
+            "id": 1646393588574
+        },
+        {
+            "curency": "€",
+            "id": 1646393609595,
+            "type": "-",
+            "name": "food",
+            "percent": 258.18,
+            "value": 14.3,
+            "description": "On the road Comelit"
+        },
+        {
+            "type": "-",
+            "curency": "€",
+            "name": "food",
+            "id": 1646479189730,
+            "percent": 258.18,
+            "value": 8.3,
+            "description": "MC Donald’s"
+        },
+        {
+            "percent": 258.18,
+            "description": "Self service Panorama",
+            "name": "food",
+            "value": 8,
+            "type": "-",
+            "id": 1646479208605,
+            "curency": "€"
+        },
+        {
+            "percent": 258.18,
+            "description": "Apartment Porto Recanati 1 month",
+            "type": "-",
+            "name": "rent",
+            "curency": "€",
+            "id": 1646479274709,
+            "value": 714.65
+        },
+        {
+            "name": "food",
+            "type": "-",
+            "percent": "6.42",
+            "id": 1646562220476,
+            "value": 26.63,
+            "description": "Panorama market",
+            "curency": "€"
+        }
+    ]
+}

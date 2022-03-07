@@ -1,0 +1,27 @@
+{
+  "name": "budget-app",
+  "version": "3.0.0",
+  "description": "Track your money in a smart way",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server src/",
+    "watch:js": "parcel watch ./client/js/index.js --out-dir ./client/dest/js-bundler --out-file bundle.js",
+    "build:js": "parcel build ./client/js/index.js --out-dir ./client/dest/js-bundler --out-file bundle.js",
+    "deploy": "gh-pages -d dest",
+    "start-server-dev": "nodemon ./server/server.js"
+  },
+  
+  "author": "Adrian Matei",
+  "license": "ISC",
+
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.2.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
