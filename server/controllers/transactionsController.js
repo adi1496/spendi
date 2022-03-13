@@ -40,4 +40,9 @@ exports.createNewTransaction = catchAsync(async(req, res, next) => {
 
 exports.getTransactions = catchAsync(async(req, res, next) => {
     
+
+    res.status(200).json({
+        status: 'success',
+        message: 'under development'
+    })
 });

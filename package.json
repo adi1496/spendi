@@ -8,12 +8,16 @@
     "watch:js": "parcel watch ./client/js/index.js --out-dir ./client/dest/js-bundler --out-file bundle.js",
     "build:js": "parcel build ./client/js/index.js --out-dir ./client/dest/js-bundler --out-file bundle.js",
     "deploy": "gh-pages -d dest",
-    "start-server-dev": "nodemon ./server/server.js"
+    "start-server-dev": "nodemon ./server/server.js",
+
+    "watch:scss": "node-sass client/scss/main.scss client/css/style_new.css -w",
+    "compile:scss": "node-sass client/scss/main.scss client/css/style.compiled.css",
+    "compress:css": "node-sass client/css/style.compiled.css client/css/style.css --output-style compressed",
+    "build:css": "npm run compile:scss npm run compress:css",
+    "live:html": "live-server client/"
   },
-  
   "author": "Adrian Matei",
   "license": "ISC",
-
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "dotenv": "^16.0.0",
@@ -22,6 +26,7 @@
     "mongoose": "^6.2.3"
   },
   "devDependencies": {
+    "node-sass": "^7.0.1",
     "nodemon": "^2.0.15"
   }
 }

@@ -1,0 +1,28 @@
+
+// buttons for add new transaction popup
+.new-btn {
+    padding: 2rem 4rem;
+    border: none;
+    outline: none;
+    font-family: inherit;
+    font-size: 1.7rem;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #f0eeee;
+}
+
+.new-btn:active {
+    transform: translateY(3px);
+}
+
+.cancel-btn {
+    margin-right: 1rem;
+}
+
+.add-btn {
+    background-color: var(--primary-color-blue);
+}
+
+.add-btn-red {
+    background-color: var(--primary-color-red);
+}

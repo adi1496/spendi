@@ -16,13 +16,18 @@ app.use((req, res, next) => {
 
 app.use(ownMiddlewares.bodyParser);
 
-app.get('/', (req, res) => {
-    res.end('It is working');
-})
+// app.get('/', (req, res) => {
+//     res.end('It is working');
+// })
 
+app.use(express.static(`${__dirname}/public/static`));
 
 app.use('/api/v1/users', userRouter);
 app.use('/api/v1/transactions', transactionsRouter);
+
+app.get('*/', (req, res) => {
+    res.sendFile(`${__dirname}/public/index.html`);
+})
 
 app.use((error, req, res, next) => {
     // console.log(error);

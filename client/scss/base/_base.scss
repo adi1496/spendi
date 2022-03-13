@@ -1,0 +1,63 @@
+/* Fonts: 
+    font-family: 'Permanent Marker', cursive;
+    font-family: 'Montserrat', sans-serif;
+*/
+
+/* Colors:
+    #0d66a1
+    #ee2727
+    #097a09
+*/
+
+:root {
+    --primary-color-blue: #0d66a1;
+    --primary-color-red: #ee2727;
+    --color-white: #ffffff;
+    --color-secundary: #097a09;
+    --color-inputs: #0d66a1;
+
+    --url-bg-image: url(../img/background2.jpg);
+}
+
+//breackpoints
+$bp-large: 78.125em;    // 1250 px
+$bp-big: 56.25em;       // 900 px
+$bp-medium: 47.5em;     // 760px
+$bp-small: 34.375em;    // 550px
+$bp-smallest: 23.75em;  // 380 px
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+
+    @media only screen and (max-width: $bp-small) {
+        font-size: 50%;
+    }
+}
+
+body {
+    /* font-family: 'Dancing Script', cursive; */
+    font-family: 'Montserrat Alternates', sans-serif;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    min-height: 100vh;
+    // background-image: linear-gradient(to right, var(--primary-color-blue), var(--primary-color-red));
+}
+
+input {
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+input, select {
+    @media only screen and (max-width: $bp-small) {
+        margin-bottom: 1rem;
+    }
+}

@@ -7,7 +7,8 @@ const router = express.Router();
 
 router.use(authController.protect);
 
-router.route('/').post(transactionsController.createNewTransaction);
+router.route('/').get(transactionsController.getTransactions)
+.post(transactionsController.createNewTransaction);
 router.route('/:id').get(transactionsController.getOneTransaction);
 
 module.exports = router;

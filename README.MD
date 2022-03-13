@@ -12,7 +12,7 @@
     * BcryptJS for hashing
     * Nodemon
 
-#### Client
+#### Client:
     * Vanilla JS
     * SASS/SCSS for CSS
     * Parcel bundler
