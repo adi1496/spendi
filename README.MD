@@ -16,3 +16,10 @@
     * Vanilla JS
     * SASS/SCSS for CSS
     * Parcel bundler
+
+
+
+### Rest Api routes
+  ### Users:
+  - [ ] SignUp = POST '/api/v1/users/signup'
+  - [ ] Login = POST '/api/v1/users/login'
