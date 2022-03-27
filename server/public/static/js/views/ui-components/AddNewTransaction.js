@@ -7,7 +7,7 @@ class AddNewTransaction extends AbstractView {
     }
 
     async getHTML() {
-        return `<div class="dark-screen" id="dark-screen-popup">
+        return /*html*/`<div class="dark-screen" id="dark-screen-popup">
         <div class="add-new">
             <h4 class="heading-4">Add New Income</h4>
             

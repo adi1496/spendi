@@ -7,11 +7,9 @@ class Dashboard extends AbstractView {
     }
 
     async getHTML() {
-        return `<nav class="nav">
+        return /*html*/`<nav class="nav">
         <select class="nav__month" name="months-list" id="months-list">
-            <option value="jan">January</option>
-            <option value="jan">January</option>
-            <option value="jan">January</option>
+            <!-- <option value="jan">January</option> -->
         </select>
         <div class="nav__user-box">
             <img src="img/user.png" alt="user-img" class="nav__user-img">

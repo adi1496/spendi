@@ -52,18 +52,22 @@ const userSchema = new mongoose.Schema({
         },
         select: false
     },
-
-    phone: {
+    accountType: {
         type: String,
-        minlength: [10, 'A phone number should be minimum 10 characters'],
-        maxlength: [15, 'A phone number should be maximum 15 characters']
+        enum: ['solo', 'family'],
+        default: 'solo'
     },
 
-    address: String,
-    city: String,
-    state: String,
-    zipCode: String,
-    country: String,
+    transactionsMade: [{
+        year: {
+            yearNo: Number,
+            months: [{
+                type: Number,
+                min: 1,
+                max: 12
+            }]
+        }
+    }],
 
     photo: String,
 

@@ -10,6 +10,10 @@ class AbstractView {
     async getHTML() {
         return '';
     }
+
+    run() {
+        return false;
+    }
 }
 
 export default AbstractView;

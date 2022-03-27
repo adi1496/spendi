@@ -7,7 +7,7 @@ class AddNewTransaction extends AbstractView {
     }
 
     async getHTML() {
-        return `<div class="dark-screen" id="dark-screen-popup">
+        return /*html*/`<div class="dark-screen" id="dark-screen-popup">
         <div class="add-new">
             <h4 class="heading-4">Add New Income</h4>
             
@@ -37,7 +37,7 @@ class AddNewTransaction extends AbstractView {
 };
 
 
-const exampleExpense = `<li class="transactions__item" id="list-item" data-id="1646145533229" data-type="-">
+const exampleExpense = /*html*/`<li class="transactions__item" id="list-item" data-id="1646145533229" data-type="-">
 <div class="transactions__item__name transactions__item__name--red">Food</div>
 <div class="transactions__item--description">Eat restaurant Bravisol</div>
 <div class="transactions__item__value transactions__item__value--red">13 € <span class="transactions__item--percent" id="item-percent">153%</span></div>

@@ -1,0 +1,55 @@
+.login-form,
+.new-user-form {
+    grid-column: 1 / -1;
+    justify-self: center;
+    align-self: center;
+    /* background-color: #e7e7eb; */
+    padding: 2rem;
+    border-radius: 5px;
+}
+
+.heading-center {
+    text-align: center;
+    padding-left: 0;
+}
+
+.login-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+}
+
+.label {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.input-field {
+    padding: 0 1rem;
+    outline: none;
+    font-size: 2rem;
+    height: 4rem;
+}
+
+.login-btn {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.google-btn {
+    width: 100%;
+    background-color: var(--primary-color-blue);
+    color: var(--color-white);
+}
+
+.question {
+    font-size: 1.7rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.message {
+    font-size: 1.9rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}

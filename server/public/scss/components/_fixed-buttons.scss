@@ -1,0 +1,33 @@
+.add-fixed-btn {
+    font-size: 5rem;
+    font-family: inherit;
+    position: fixed;
+    bottom: 2rem;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    background-color: var(--color-white);
+
+    &:hover {
+        background-color: #c4c1c1;
+    }
+
+    &:active {
+        transform: scale(.9);
+    }
+}
+
+
+.income-btn {
+    left: 2rem;
+    border: 5px solid var(--primary-color-blue);
+    color: var(--primary-color-blue);
+}
+
+.expense-btn {
+    right: 2rem;
+    border: 5px solid var(--primary-color-red);
+    color: var(--primary-color-red);
+}
