@@ -1,0 +1,463 @@
+{
+    "balance": 1420.14,
+    "monthIncomesValue": 3098,
+    "monthExpensesValue": 1677.86,
+    "monthExpensesPercentage": 54.16,
+    "incomes": [
+        {
+            "type": "+",
+            "id": 1646479344286,
+            "name": "salary",
+            "curency": "€",
+            "description": "Transferta",
+            "value": 415
+        },
+        {
+            "id": 1646893352655,
+            "description": "Transferta",
+            "type": "+",
+            "value": 375,
+            "curency": "€",
+            "name": "salary"
+        },
+        {
+            "type": "+",
+            "curency": "€",
+            "id": 1647438542078,
+            "name": "salary",
+            "description": "Transferta",
+            "value": 375
+        },
+        {
+            "name": "salary",
+            "value": 450,
+            "type": "+",
+            "curency": "€",
+            "id": 1648037036990,
+            "description": "Transferta "
+        },
+        {
+            "description": "February 2022",
+            "value": 1108,
+            "id": 1648214243280,
+            "curency": "€",
+            "name": "salary",
+            "type": "+"
+        },
+        {
+            "id": 1648638469975,
+            "curency": "€",
+            "value": 375,
+            "name": "salary",
+            "type": "+",
+            "description": "Transferta "
+        }
+    ],
+    "expenses": [
+        {
+            "name": "food",
+            "id": 1646145533229,
+            "percent": 52.22,
+            "type": "-",
+            "description": "Eat restaurant Bravisol",
+            "curency": "€",
+            "value": 13
+        },
+        {
+            "percent": 52.22,
+            "value": 16,
+            "curency": "€",
+            "type": "-",
+            "name": "food",
+            "description": "Eat restaurant Bravisol",
+            "id": 1646145573154
+        },
+        {
+            "percent": 52.22,
+            "curency": "€",
+            "id": 1646212343835,
+            "type": "-",
+            "name": "food",
+            "value": 7.5,
+            "description": "MC Donald’s"
+        },
+        {
+            "description": "On the road Comelit",
+            "name": "food",
+            "id": 1646302018090,
+            "curency": "€",
+            "type": "-",
+            "value": 14.3,
+            "percent": 52.22
+        },
+        {
+            "description": "Spotify",
+            "percent": 52.22,
+            "curency": "€",
+            "value": 7.99,
+            "type": "-",
+            "name": "bills",
+            "id": 1646302095124
+        },
+        {
+            "id": 1646302105102,
+            "name": "bills",
+            "value": 11.99,
+            "type": "-",
+            "description": "Netflix",
+            "curency": "€",
+            "percent": 52.22
+        },
+        {
+            "id": 1646372718242,
+            "description": "On the road Comelit",
+            "type": "-",
+            "value": 14.3,
+            "name": "food",
+            "percent": 52.22,
+            "curency": "€"
+        },
+        {
+            "curency": "€",
+            "name": "food",
+            "type": "-",
+            "description": "MC Donalsd’s",
+            "value": 7.1,
+            "percent": 52.22,
+            "id": 1646372744133
+        },
+        {
+            "percent": 52.22,
+            "value": 234,
+            "id": 1646393588574,
+            "description": "Hotel Osimo",
+            "name": "rent",
+            "type": "-",
+            "curency": "€"
+        },
+        {
+            "curency": "€",
+            "type": "-",
+            "percent": 52.22,
+            "name": "food",
+            "value": 14.3,
+            "description": "On the road Comelit",
+            "id": 1646393609595
+        },
+        {
+            "type": "-",
+            "percent": 52.22,
+            "description": "MC Donald’s",
+            "id": 1646479189730,
+            "name": "food",
+            "value": 8.3,
+            "curency": "€"
+        },
+        {
+            "value": 8,
+            "description": "Self service Panorama",
+            "name": "food",
+            "type": "-",
+            "percent": 52.22,
+            "id": 1646479208605,
+            "curency": "€"
+        },
+        {
+            "value": 714.65,
+            "type": "-",
+            "description": "Apartment Porto Recanati 1 month",
+            "name": "rent",
+            "percent": 52.22,
+            "curency": "€",
+            "id": 1646479274709
+        },
+        {
+            "value": 26.63,
+            "name": "food",
+            "id": 1646562220476,
+            "type": "-",
+            "percent": 52.22,
+            "curency": "€",
+            "description": "Panorama market"
+        },
+        {
+            "value": 15.3,
+            "type": "-",
+            "percent": 52.22,
+            "name": "food",
+            "id": 1646679018395,
+            "curency": "€",
+            "description": "On the road restaurant"
+        },
+        {
+            "value": 48.5,
+            "type": "-",
+            "curency": "€",
+            "description": "Hotel Palazzo Bello 1 night",
+            "id": 1646679053850,
+            "percent": 52.22,
+            "name": "rent"
+        },
+        {
+            "curency": "€",
+            "id": 1646762801115,
+            "percent": 52.22,
+            "description": "Supermarket Oasi",
+            "value": 12.28,
+            "name": "food",
+            "type": "-"
+        },
+        {
+            "type": "-",
+            "description": "Restaurant On the Road",
+            "id": 1646762819389,
+            "curency": "€",
+            "name": "food",
+            "value": 14.3,
+            "percent": 52.22
+        },
+        {
+            "value": 14,
+            "id": 1646893322291,
+            "percent": 52.22,
+            "type": "-",
+            "description": "On the Road",
+            "curency": "€",
+            "name": "food"
+        },
+        {
+            "value": 8.5,
+            "percent": 52.22,
+            "curency": "€",
+            "id": 1646893338242,
+            "type": "-",
+            "name": "food",
+            "description": "Supermarket Oasi"
+        },
+        {
+            "percent": 52.22,
+            "description": "On the road",
+            "id": 1646977802388,
+            "name": "food",
+            "curency": "€",
+            "value": 14.3,
+            "type": "-"
+        },
+        {
+            "description": "On the Road",
+            "type": "-",
+            "percent": 52.22,
+            "id": 1646998568267,
+            "curency": "€",
+            "name": "food",
+            "value": 14.8
+        },
+        {
+            "description": "Ho monile",
+            "type": "-",
+            "curency": "€",
+            "value": 10,
+            "id": 1646998592975,
+            "percent": 52.22,
+            "name": "bills"
+        },
+        {
+            "id": 1647263912119,
+            "name": "food",
+            "value": 44.85,
+            "description": "Supermarket Oasi",
+            "type": "-",
+            "percent": 52.22,
+            "curency": "€"
+        },
+        {
+            "id": 1647263968596,
+            "curency": "€",
+            "description": "Restaurant On the Road",
+            "percent": 52.22,
+            "type": "-",
+            "value": 26,
+            "name": "food"
+        },
+        {
+            "percent": 52.22,
+            "type": "-",
+            "id": 1647354805199,
+            "name": "food",
+            "curency": "€",
+            "description": "Supermarket Oasi",
+            "value": 5.17
+        },
+        {
+            "type": "-",
+            "name": "food",
+            "value": 14.3,
+            "percent": 52.22,
+            "curency": "€",
+            "id": 1647372229560,
+            "description": "Restaurant On the Road"
+        },
+        {
+            "value": 14.8,
+            "description": "Restaurant On the Road",
+            "percent": 52.22,
+            "type": "-",
+            "name": "food",
+            "id": 1647438487690,
+            "curency": "€"
+        },
+        {
+            "percent": 52.22,
+            "description": "Supermarket Oasi",
+            "id": 1647606353774,
+            "type": "-",
+            "value": 4.78,
+            "name": "food",
+            "curency": "€"
+        },
+        {
+            "description": "Restaurant On the Road ",
+            "percent": 52.22,
+            "curency": "€",
+            "name": "food",
+            "type": "-",
+            "id": 1647606467862,
+            "value": 15.3
+        },
+        {
+            "curency": "€",
+            "percent": 52.22,
+            "value": 9.7,
+            "id": 1647711069463,
+            "name": "food",
+            "type": "-",
+            "description": "MC Donald’s "
+        },
+        {
+            "description": "Supermarket Oasi",
+            "curency": "€",
+            "id": 1647711090605,
+            "value": 22.5,
+            "type": "-",
+            "percent": 52.22,
+            "name": "food"
+        },
+        {
+            "curency": "€",
+            "type": "-",
+            "value": 14.3,
+            "name": "food",
+            "description": "Restaurant On the Road ",
+            "id": 1647864297718,
+            "percent": 52.22
+        },
+        {
+            "description": "Restaurant On the Road ",
+            "id": 1647952790099,
+            "value": 14.3,
+            "curency": "€",
+            "percent": 52.22,
+            "name": "food",
+            "type": "-"
+        },
+        {
+            "value": 14.24,
+            "percent": 52.22,
+            "name": "food",
+            "type": "-",
+            "description": "Supermarket Euro Spin",
+            "curency": "€",
+            "id": 1648017942022
+        },
+        {
+            "value": 14.3,
+            "description": "Restaurant On the Road ",
+            "type": "-",
+            "id": 1648037016408,
+            "name": "food",
+            "curency": "€",
+            "percent": 52.22
+        },
+        {
+            "name": "food",
+            "type": "-",
+            "id": 1648148554305,
+            "percent": 52.22,
+            "description": "Restaurant On the Road ",
+            "value": 8.3,
+            "curency": "€"
+        },
+        {
+            "type": "-",
+            "name": "food",
+            "id": 1648148573256,
+            "percent": 52.22,
+            "description": "Restaurant Oasi",
+            "value": 6.18,
+            "curency": "€"
+        },
+        {
+            "id": 1648214185115,
+            "description": "Restaurant On the Road ",
+            "type": "-",
+            "percent": 52.22,
+            "value": 14.3,
+            "curency": "€",
+            "name": "food"
+        },
+        {
+            "name": "food",
+            "description": "Supermarket Oasi",
+            "curency": "€",
+            "id": 1648214203529,
+            "value": 4.77,
+            "type": "-",
+            "percent": 52.22
+        },
+        {
+            "name": "food",
+            "curency": "€",
+            "percent": 52.22,
+            "id": 1648549665065,
+            "type": "-",
+            "description": "Supermarket Conad",
+            "value": 47.92
+        },
+        {
+            "value": 42.71,
+            "percent": 52.22,
+            "curency": "€",
+            "name": "shopping",
+            "id": 1648551190566,
+            "type": "-",
+            "description": "Undemy English course for Emi"
+        },
+        {
+            "id": 1648551201869,
+            "name": "food",
+            "type": "-",
+            "percent": 52.22,
+            "curency": "€",
+            "value": 14.3,
+            "description": "Restaurant On the Road "
+        },
+        {
+            "id": 1648638442534,
+            "percent": 52.22,
+            "type": "-",
+            "name": "food",
+            "value": 14.8,
+            "description": "Restaurant On the Road ",
+            "curency": "€"
+        },
+        {
+            "name": "bills",
+            "description": "Speed fine",
+            "type": "-",
+            "percent": "1.94",
+            "value": 60,
+            "id": 1648638512679,
+            "curency": "€"
+        }
+    ]
+}

@@ -12,7 +12,7 @@ class AbstractView {
     }
 
     run() {
-        return false;
+        return ;
     }
 }
 

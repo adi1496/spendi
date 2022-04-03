@@ -12,7 +12,7 @@ class Router {
 
     async routeTo() {
         let matchRoute;
-        window.router.potentialPaths.forEach(path => {
+        this.potentialPaths.forEach(path => {
             if(path.route === location.pathname) matchRoute = path;
         });
 
@@ -73,7 +73,10 @@ class Router {
             if(e.target.dataset.link) window.router.navigateTo(e.target.href);
         })
         
-        window.addEventListener('popstate', window.router.routeTo);
+        window.addEventListener('popstate', e => {
+            e.preventDefault();
+            window.router.routeTo()
+        });
     }
 
 }

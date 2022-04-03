@@ -10,7 +10,7 @@ const transactionsRouter = require('./routes/transactionRoutes.js');
 const app = express();
 
 app.use((req, res, next) => {
-    // console.log(req.path);
+    console.log(req.path);
     next();
 })
 

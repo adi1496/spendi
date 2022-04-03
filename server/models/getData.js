@@ -11,6 +11,7 @@ mongoose.connect(db, {
     useUnifiedTopology: true
 }).then(() => {
     console.log('Database successfully connected...📟');
+    getData();
 }).catch(err => {
     console.log(err);
 });
@@ -34,15 +35,14 @@ const insert = async (array, userId, type) => {
     });
 }
 
-const getData = async () => {
-    const file = fs.readFileSync(`./data.json`, 'utf-8');
+async function getData() {
+    // console.log(__dirname);
+    const file = fs.readFileSync(`${__dirname}/data2.json`, 'utf-8');
 
     const json = JSON.parse(file);
-    const userId = '6224c67781b7b204a478998e';
+    const userId = '62407ef46c40dae8b14cb70c';
 
     // console.log(json.incomes);
-    // await insert(json.incomes, userId, 'income');
+    await insert(json.incomes, userId, 'income');
     await insert(json.expenses, userId, 'expense');
 };
-
-getData();

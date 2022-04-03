@@ -10,9 +10,9 @@
     "build:js": "parcel build ./client/js/index.js --out-dir ./client/dest/js-bundler --out-file bundle.js",
     "deploy": "gh-pages -d dest",
 
-    "watch:scss": "node-sass client/scss/main.scss client/css/style_new.css -w",
-    "compile:scss": "node-sass client/scss/main.scss client/css/style.compiled.css",
-    "compress:css": "node-sass client/css/style.compiled.css client/css/style.css --output-style compressed",
+    "watch:scss": "node-sass server/public/scss/main.scss server/public/static/css/style.css -w",
+    "compile:scss": "node-sass server/public/scss/main.scss server/public/static/css/style.compiled.css",
+    "compress:css": "node-sass server/public/static/css/style.compiled.css server/public/static/css/style.css --output-style compressed",
     "build:css": "npm run compile:scss npm run compress:css",
     "live:html": "live-server client/"
   },

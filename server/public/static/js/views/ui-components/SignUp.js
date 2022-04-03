@@ -11,7 +11,7 @@ class SignUp extends AbstractView {
         this.setTitle('BudgetApp | SignUp');
 
         return /*html*/`<form class="login-form" id="loginForm">
-        <h3 class="heading-3 heading-center" id="title">Welcome back</h3>
+        <h3 class="heading-3 heading-3__auth heading-center" id="title">Welcome</h3>
         <div class="login-field">
             <label for="firstName" class="label">First Name</label>
             <input type="text" name="firstName" id="firstName" class="input-field">
@@ -37,9 +37,9 @@ class SignUp extends AbstractView {
         </form>`;
     }
 
-    run() {
-        return ;
-    }
+    // run() {
+    //     return ;
+    // }
 };
 
 export default SignUp;

@@ -60,6 +60,10 @@ class Dashboard extends AbstractView {
     
     </section>`;
     }
+
+    run() {
+        return ;
+    }
 };
 
 export default Dashboard;
