@@ -1,15 +1,25 @@
 import AbstractView from "./absractView.js";
 
-import {signupController} from "../../controllers/authController.js";
+import {isLoggedIn} from "../../controllers/authController.js";
 
 class SignUp extends AbstractView {
     constructor() {
         super();
+        this.title = 'BudgetApp | SignUp';
     }
 
-    async getHTML() {
-        this.setTitle('BudgetApp | SignUp');
+    async validateRender() {
+        const isUserLogged = await isLoggedIn();
+        if(isUserLogged ) return '/';
+        return 'ok';
+    }
 
+    run() {
+        return ;
+    }
+
+    async render() {
+        this.setTitle();
         return /*html*/`<form class="login-form" id="loginForm">
         <h3 class="heading-3 heading-3__auth heading-center" id="title">Welcome</h3>
         <div class="login-field">
@@ -36,10 +46,6 @@ class SignUp extends AbstractView {
         <p class="question">Already have an account? Then <a data-link=true href="/login" id="to-login">Log In</a></p>
         </form>`;
     }
-
-    // run() {
-    //     return ;
-    // }
 };
 
 export default SignUp;

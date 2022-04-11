@@ -1,0 +1,33 @@
+// .menu {
+//     margin-top: 6rem;
+//     position: absolute;
+//     width: 30%;
+//     height: 100vh;
+//     background-color: var(--color-grey);
+//     // transition: all .5s;
+//     animation: dropdown 1s;
+// }
+
+// .menu--hidden {
+//     transform: translateY(-5rem);
+//     margin-left: 1rem;
+//     // width: 4rem;
+//     height: 4rem;
+//     z-index: -1;
+// }
+
+.menu {
+    position: fixed;
+    // z-index: -1;
+    height: 0rem;
+    margin-top: 6rem;
+    width: 30%;
+    background-color: var(--color-grey);
+    transition: all 1s;
+    // animation: dropdown 1s;
+}
+
+.menu--visible {
+    height: 100vh;
+    // z-index: 100;
+}

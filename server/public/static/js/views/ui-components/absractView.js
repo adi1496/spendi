@@ -1,18 +1,26 @@
 class AbstractView {
     constructor() {
-
+        this.title = undefined;
+        this.html = undefined;
+        this.redirect = undefined;
     }
 
-    setTitle(title) {
-        document.title = title;
+    setTitle() {
+        document.title = this.title;
     }
 
-    async getHTML() {
-        return '';
+    async validateRender() {
+        return;
     }
+
 
     run() {
         return ;
+    }
+
+
+    async render() {
+        return '';
     }
 }
 

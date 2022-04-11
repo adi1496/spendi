@@ -5,12 +5,6 @@ exports.transactionQuery = (query) => {
     const result = {};
     const excludeFields = ['year'];
 
-    result.year = [];
-    if(query.year){
-        result.year = query.year.split(',');
-    } else {
-        result.year[0] = (new Date(Date.now())).getFullYear();
-    }
 
     result.options = {};
     for(let prop in query) {
@@ -31,6 +25,6 @@ exports.transactionQuery = (query) => {
     }
 
     console.log(result);
-    return result;
+    return result.options;
 
 }

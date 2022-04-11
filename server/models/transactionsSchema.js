@@ -1,7 +1,5 @@
 const mongoose = require('mongoose');
 
-const monthsNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-
 const  transactionsSchema = new mongoose.Schema({
     type: {
         required: [true, 'A transaction must be of a type'],
@@ -19,14 +17,13 @@ const  transactionsSchema = new mongoose.Schema({
     monthName: {
         type: String,
     },
+    year: {
+        type: Number
+    },
     value: {
         type: Number,
         required: [true, 'A transaction must have a value'],
         min: 0,
-    },
-    percent: {
-        type: Number,
-        min: 0
     },
     date: {
         type: Date,
@@ -41,12 +38,16 @@ const  transactionsSchema = new mongoose.Schema({
     }
 });
 
+// if date is Modified get month, monthName, year
 transactionsSchema.pre('save', function(next) {
+    const monthsNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
     if(!this.isModified('date')) return next();
 
     const month = this.date.getMonth();
     this.monthName = monthsNames[month];
     this.month = month + 1;
+    this.year = this.date.getFullYear();
 
     next();
 });

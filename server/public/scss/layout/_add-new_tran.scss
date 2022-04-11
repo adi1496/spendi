@@ -3,12 +3,30 @@
     width: 100%;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.856);
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0);
+    transition: all 1s ease-in-out;
+    // animation: fade-from-down 1s;
+    
+
+    &--hidden {
+        width: 0%;
+        height: 0%;
+        // top: 100%;
+        // left: 50%;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(100%);
+        transition: all 1s ease-in-out;
+        // animation: fade-from-down 1s;
+    }
 }
 
 .add-new {
     width: 80%;
     height: 80vh;
-    position: fixed;
+    position: relative;
     background-color: #ffffff;
     /* background-color: var(--primary-color-blue); */
     padding: 2rem;

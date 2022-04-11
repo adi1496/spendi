@@ -5,8 +5,8 @@
 
 
 ##Server errors to treated with error controller:
--[ ] Validation errors
--[ ] User duplicate error
+ - [ ] Validation errors
+ - [ ] User duplicate error
 
 
 ### Technologies and libraries used:
@@ -50,4 +50,4 @@
 
 
   ### CLIENT
-    - [ ] make some animations for login/signup pages
+  - [ ] make some animations for login/signup pages

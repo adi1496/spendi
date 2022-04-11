@@ -15,8 +15,9 @@
     --color-white: #ffffff;
     --color-secundary: #097a09;
     --color-inputs: #0d66a1;
+    --color-grey: #413f3f;
 
-    --url-bg-image: url(../img/background2.jpg);
+    --url-bg-image: url(../img/background3.jpg);
 }
 
 //breackpoints
@@ -50,6 +51,8 @@ body {
     grid-template-columns: repeat(2, 1fr);
     min-height: 100vh;
     // background-image: linear-gradient(to right, var(--primary-color-blue), var(--primary-color-red));
+    background-image: linear-gradient(to right, var(--primary-color-blue), #8a0101);
+    // background-image: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, 0.8));
 }
 
 input {

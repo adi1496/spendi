@@ -3,6 +3,7 @@ const fs = require('fs');
 const mongoose = require('mongoose');
 
 const transactionsSchema = require('./transactionsSchema.js');
+const userController = require('./../controllers/userController.js');
 
 const db = 'mongodb://localhost:27017/budget-app'
 
@@ -17,6 +18,8 @@ mongoose.connect(db, {
 });
 
 const insert = async (array, userId, type) => {
+    const Transaction = mongoose.model(`${userId}`, transactionsSchema);
+
     array.forEach(async el => {
         const transaction = {
             type: type,
@@ -27,9 +30,10 @@ const insert = async (array, userId, type) => {
             userId: userId
         }
 
-        const Transaction = mongoose.model(`${userId}-${transaction.date.getFullYear()}`, transactionsSchema);
 
         const newTransaction = await Transaction.create(transaction);
+
+
 
         console.log(newTransaction);
     });

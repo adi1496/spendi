@@ -3,6 +3,15 @@ const bcrypt = require('bcryptjs');
 
 const validators = require('./../utils/validators.js');
 
+const transactionYearsSchema = new mongoose.Schema({
+    year: Number,
+    months: [{
+        type: Number,
+        min: 1,
+        max: 12
+    }]
+});
+
 const userSchema = new mongoose.Schema({
     firstName: {
         type: String,
@@ -52,22 +61,24 @@ const userSchema = new mongoose.Schema({
         },
         select: false
     },
+
+    emailVerified: {
+        type: Boolean,
+        default: false
+    },
+    
     accountType: {
         type: String,
         enum: ['solo', 'family'],
         default: 'solo'
     },
 
-    transactionsMade: [{
-        year: {
-            yearNo: Number,
-            months: [{
-                type: Number,
-                min: 1,
-                max: 12
-            }]
-        }
-    }],
+    baseCurrency: {
+        type: String,
+        enum: ['$', 'RON', '€', '£']
+    },
+
+    transactionsTimeline: [transactionYearsSchema],
 
     photo: String,
 
@@ -77,10 +88,17 @@ const userSchema = new mongoose.Schema({
         default: 'user'
     },
 
+    configDone: {
+        type: Boolean,
+        default: false
+    },
+
     active: {
         type: Boolean,
         default: true
     },
+
+    accountCreatedAt: Date,
 
     activateAccount: String,
 
@@ -93,9 +111,24 @@ const userSchema = new mongoose.Schema({
     }
 });
 
+
+// if user is new
+userSchema.pre('save', function(next) {
+    if(this.isNew){
+        this.accountCreatedAt = new Date(Date.now());
+
+        this.transactionsTimeline.push({year: this.accountCreatedAt.getFullYear(),
+                                    months: [this.accountCreatedAt.getMonth() + 1]});
+    }
+
+    next();
+})
+
+
+// if password is modified
 userSchema.pre('save', async function(next){
     if(!this.isModified('password')) return next();
-    
+
     this.password = await bcrypt.hash(this.password, 12);
     this.confirmPassword = undefined;
     this.passwordChangedAt = Date.now() - 1000;
