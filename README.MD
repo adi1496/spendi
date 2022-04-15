@@ -46,8 +46,15 @@
   - [x] Create Transaction Schema(the model will be created in the controller dipending by model)
   - [x] Create a class AppError that extends Error class
   - [x] Create errorController to handle the errors
+  - [ ] user model / add "connectedWith" field to be able to share your transactions with friends or family members
+  - [ ] user model / add "emailVerificationToken" to be able to voerify the email after account creation
+
 
 
 
   ### CLIENT
   - [ ] make some animations for login/signup pages
+  - [ ] new transaction / add currency button
+  - [ ] new transaction / after description add also sone notes
+  - [ ] create page for email verification response
+  
