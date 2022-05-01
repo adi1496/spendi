@@ -1,0 +1,25 @@
+.overview {
+    grid-column: 1 / -1;
+    width: 90%;
+    justify-self: center;
+
+
+    @media only screen and (max-width: $bp-big) {
+        grid-template-columns: 1fr;
+        // background-image: linear-gradient(to bottom right, var(--primary-color-blue), #413f3f);
+    }
+
+    &__list {
+        list-style: none;
+    }
+
+
+
+    &__transactions {
+        margin-top: 3rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+}

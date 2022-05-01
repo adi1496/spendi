@@ -7,8 +7,7 @@ export const addTransactionItem = (transaction, incomeTotal) => {
     let item = transactionItem;
 
 
-    const incomesList = document.getElementById('incomes-list');
-    const expensesList = document.getElementById('expenses-list');
+    const transactionsList = document.getElementById('transactions-list');
 
     const monthArr = transaction.month.toString().split('');
     if(monthArr.length < 2) monthArr.unshift('0');
@@ -26,36 +25,39 @@ export const addTransactionItem = (transaction, incomeTotal) => {
     item = item.replace('%category%', camelCase(transaction.category));
     item = item.replace('%date%', transactionDate);
     item = item.replace('%description%', transaction.description);
-    item = item.replace('%value%', transaction.value);
     item = item.replace('%currency%', appState.user.baseCurrency);
-
+    
     if(transaction.type === 'income') {
-        item = item.replace('%percent-span%', '');
-        item = item.replace(/%class-red%/g, '');
-        incomesList.insertAdjacentHTML('beforeend', item);
+        item = item.replace('%value%', transaction.value);
+        item = item.replace(/%class-income%/g, 'income-color');
     }
     if(transaction.type === 'expense') {
-        let percentSpan = /*html*/`<span class="transactions__item--percent" id="item-percent">%percent%%</span>`;
-        const percent = Math.ceil((transaction.value * 100) / incomeTotal);
-        percentSpan = percentSpan.replace('%percent%', percent);
-        item = item.replace('%percent-span%', percentSpan);
-        item = item.replace(/%class-red%/g, 'transactions__item--red');
-        expensesList.insertAdjacentHTML('afterbegin', item);
+        item = item.replace('%value%', `-${transaction.value}`);
+        item = item.replace(/%class-income%/g, '');
     }
+
+    transactionsList.insertAdjacentHTML('afterbegin', item);
+
+}
+
+export const updateBalanceProgressBar = () => {
+    const panelPercent = document.getElementById('panel-percent');
+    const panelProgressBar = document.getElementById('panel-progress-bar');
+
+    panelPercent.textContent = `${appState.expensesPercent}%`;
+    panelProgressBar.style.width = `${appState.expensesPercent}%`;
 }
 
 
 export const printBalances = () => {
-    const incomeCurrentMonth = document.getElementById('income-month-value');
-    const expenseCurrentMonth = document.getElementById('expense-month-value');
+    const incomeCurrentMonth = document.querySelectorAll('#budget-month');
     const balanceCurrentMonth = document.getElementById('balance-value');
-    const currencyAll = document.querySelectorAll('#currency');
 
-    incomeCurrentMonth.textContent = appState.incomeTotal;
-    expenseCurrentMonth.textContent = appState.expensesTotal;
-    balanceCurrentMonth.textContent = appState.balance;
+    incomeCurrentMonth.forEach(el => {
+        el.textContent = `${appState.incomeTotal} ${appState.user.baseCurrency}`;
+    });
 
-    currencyAll.forEach(el => el.textContent= appState.user.baseCurrency);
+    balanceCurrentMonth.textContent = `${appState.balance} ${appState.user.baseCurrency}`;
 
 }
 

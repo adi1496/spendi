@@ -1,7 +1,5 @@
-# Budget APP
+# Spendi App
 ## Track your money in a smart way
-
-### In the version 3.0 I created a node.js server instead using firebase for more control
 
 
 ##Server errors to treated with error controller:

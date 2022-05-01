@@ -1,0 +1,11 @@
+main {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 20rem;
+
+    border-top-right-radius: 8rem;
+    border-top-left-radius: 8rem;
+    // background-color: #2e1954;
+    background-color: var(--secondary-color-dark);
+}

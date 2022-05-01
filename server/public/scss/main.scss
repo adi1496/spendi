@@ -2,17 +2,21 @@
 @import "base/base";
 @import "base/animations";
 @import "base/typography";
+@import "base/utils.scss";
 
 
 @import "layout/nav-bar";
 @import "layout/header";
 @import "layout/add-new_tran";
-@import "layout/transactions";
+@import "layout/main-body";
 @import "layout/menu";
 
+@import "sections/overview";
+@import "sections/panel";
 
 @import "components/fixed-buttons";
 @import "components/buttons";
+@import "components/transaction-item.scss";
 
 
 @import "pages/login-signup";

@@ -40,11 +40,19 @@
     outline: none;
     font-size: 2rem;
     height: 4rem;
+    color: #00FFBF;
+    background-color: #301362;
+    border: none;
+    border-radius: 5px;
 }
 
 .login-btn {
     width: 100%;
     margin-bottom: 2rem;
+    background-color: #00FFBF;
+    // color: #160C28;
+    color: #301362;
+    font-weight: bold;
 }
 
 .google-btn {

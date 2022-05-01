@@ -2,7 +2,7 @@
     grid-column: 1 / -1;
     width: 100%;
     height: 6rem;
-    background-color: #212221;
+    background-color: rgba(var(--secondary-color-dark-rgb), .2);
     position: fixed;
     display: flex;
     justify-content: space-between;
@@ -12,22 +12,18 @@
         height: 4rem;
         align-self: center;
         margin-left: 1rem;
-        fill: var(--color-white);
         cursor: pointer;
-        transition: all.5s;
+        transition: all .5s;
 
         &:hover {
-            fill: var(--primary-color-blue);
             transform: scale(1.1);
         }
 
         &:active {
             transform: translateY(.5rem);
-            transform: scale(2);
         }
 
         &--active {
-            fill: var(--primary-color-blue);
 
             &:hover {
                 fill: var(--color-white);
@@ -45,6 +41,7 @@
 
     &__user-name {
         margin-right: 2rem;
+        cursor: pointer;
     }
 
     &__user-img {

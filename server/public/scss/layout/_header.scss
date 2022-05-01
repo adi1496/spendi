@@ -9,91 +9,32 @@
     flex-direction: column;
     align-items: center;
     margin-top: 5rem;
+    margin-bottom: 5rem;
 
-    &__logo {
-        padding: 2rem;
-        align-self: flex-start;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        user-select: none;
+    &__month {
+        font-size: 2rem;
+        color: var(--color-white);
         cursor: pointer;
     }
 
+    &__balance-info {
+        text-align: center;
+        margin: 3rem 0;
+    }
+
     &__balance {
-        color: var(--color-white);
-        font-size: 3rem;
+        color: var(--primary-color);
+        font-size: 5rem;
         font-weight: 500;
-        margin-bottom: 3rem;
 
         @media only screen and (max-width: $bp-smallest) {
             text-align: center;
         }
     }
 
-    &__balance-value {
-        font-weight: 700;
-        color: var(--color-secundary);
-
-        &--red {
-            color: var(--primary-color-red);
-        }
+    &__budget {
+        font-size: 2.5rem;
+        color: var(--primary-color-dark);
     }
 
-    &__box-bar {
-        width: 50rem;
-        background-color: var(--primary-color-blue);
-        &--red {
-            background-color: var(--primary-color-red);
-        }
-
-        padding: 2rem;
-        font-weight: 600;
-        border-radius: 5px;
-        display: grid;
-        grid-template-columns: 50% max-content max-content 1fr;
-        align-items: center;
-        gap: 0 2rem;
-        font-size: 2rem;
-        color: var(--color-white);
-
-        @media only screen and (max-width: $bp-small) {
-            width: 40rem;
-            grid-template-columns: 40% max-content max-content 1fr;
-        }
-
-        @media only screen and (max-width: $bp-smallest) {
-            width: 35rem;
-            grid-template-columns: 30% max-content max-content 1fr;
-        }
-
-        &:not(:last-of-type) {
-            margin-bottom: 2rem;
-        }
-
-        &:last-of-type {
-            margin-bottom: 4rem;
-        }
-    }
-
-    &__box-bar-text {
-        margin-left: 1rem;
-    }
-
-    &__box-bar-value {
-        justify-self: end;
-    }
-
-    &__box-bar-percent {
-        justify-self: end;
-        color: #630c0c;
-        /* background-color: #a3141454; */
-        /* padding: 1rem; */
-    }
 }
-
-// .logo-icon {
-//     width: 5rem;
-//     height: 5rem;
-//     fill: var(--primary-color-blue);
-// }

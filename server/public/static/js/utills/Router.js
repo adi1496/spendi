@@ -42,7 +42,7 @@ class Router {
 
     // init routers linteners
     async initRouterLinteners() {
-            
+
         // listener to all anchor tags <a> that have data-link setted
         document.body.addEventListener('click', e => {
             e.preventDefault();

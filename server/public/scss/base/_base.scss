@@ -7,15 +7,42 @@
     #0d66a1
     #ee2727
     #097a09
+
+    // new
+    #301362
+    #160C28
+    #00FFBF
 */
 
+// SASS variables
+$transaction-item-color: #160C28;
+
+
+
+// CSS variables
 :root {
+    // static variables
+    --primary-color: #00FFBF;
+    --primary-color-dark: #00b688;
+    --primary-color-light: #49ffd1;
+    --secondary-color: #301362;
+    --secondary-color-dark: #160C28;
+    --secondary-color-light: #6929d6;
+
+    --secondary-color-dark-rgb: 105, 41, 214;
+
+    --color-white: #ffffff;
+    --color-grey: #d4d4d4;
+    
+
+    // dynamic variables
+    --progress-bar-color: #49ffd1; // till 69% #49ffd1 and from 70% #6929d6
+
     --primary-color-blue: #0d66a1;
     --primary-color-red: #ee2727;
-    --color-white: #ffffff;
+    
     --color-secundary: #097a09;
     --color-inputs: #0d66a1;
-    --color-grey: #413f3f;
 
     --url-bg-image: url(../img/background3.jpg);
 }
@@ -51,7 +78,8 @@ body {
     grid-template-columns: repeat(2, 1fr);
     min-height: 100vh;
     // background-image: linear-gradient(to right, var(--primary-color-blue), var(--primary-color-red));
-    background-image: linear-gradient(to right, var(--primary-color-blue), #8a0101);
+    // background-image: linear-gradient(to right, var(--primary-color-blue), #8a0101);
+    background-color: var(--secondary-color);
     // background-image: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, 0.8));
 }
 

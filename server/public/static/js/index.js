@@ -40,17 +40,33 @@ const initRouter = async () => {
 const initListeners = () => {
     document.body.addEventListener('click', event => {
         event.preventDefault();
-        console.log(event.target);
+        console.log(event.path);
+
+        // iterate the path of the clicked element and the fire up all click events
+        event.path.forEach(path => {
+            console.log(path.id);
+
+            if(path.id === undefined || path.id === '') return;
+            
+            // user auth
+            if(path.id === 'sign-up-btn') signupController();
+            if(path.id === 'login-btn') loginController();
+            if(path.id === 'logout-btn') logout();
+            if(path.id === 'login-with-google-btn') loginWithGoogle();
+
+            if(location.pathname === '/') dashboardController.dashboardListeners(path);
+            if(location.pathname === '/new-account-config') newAccountLinstener(path);
+        })
 
         // user auth
-        if(event.target.id === 'sign-up-btn') signupController();
-        if(event.target.id === 'login-btn') loginController();
-        if(event.target.id === 'logout-btn') logout();
-        if(event.target.id === 'login-with-google-btn') loginWithGoogle();
+        // if(event.target.id === 'sign-up-btn') signupController();
+        // if(event.target.id === 'login-btn') loginController();
+        // if(event.target.id === 'logout-btn') logout();
+        // if(event.target.id === 'login-with-google-btn') loginWithGoogle();
 
 
-        if(location.pathname === '/') dashboardController.dashboardListeners(event);
-        if(location.pathname === '/new-account-config') newAccountLinstener(event);
+        // if(location.pathname === '/') dashboardController.dashboardListeners(event);
+        // if(location.pathname === '/new-account-config') newAccountLinstener(event);
 
     });
 

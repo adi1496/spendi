@@ -1,12 +1,12 @@
 import { fetchGet } from "../utills/fetch.js";
-import { updateNavBar, addTransactionItem, printBalances } from "../views/dashboardView.js";
+import { updateNavBar, addTransactionItem, printBalances, updateBalanceProgressBar } from "../views/dashboardView.js";
 
 export const dashboardListeners = (event) => {
-    // console.log('pressed');
-    if(event.target.id === 'income-btn' || event.target.id === 'cancel-popup-btn') 
+    console.log(event);
+    if(event.id === 'income-btn' || event.id === 'cancel-popup-btn') 
         document.getElementById('dark-screen-popup').classList.toggle('dark-screen--hidden');
 
-    if(event.target.id === 'nav-menu') {
+    if(event.id === 'nav-menu') {
         const menuCont = document.getElementById('menu-container');
         menuCont.classList.toggle('menu--visible');
         if(menuCont.classList.value.split(' ').includes('menu--visible')) {
@@ -47,9 +47,11 @@ export const initDasboard = async () => {
     appState.transactions = response.transactions;
     appState.incomeTotal = sumIncomes;
     appState.expensesTotal = sumExpenses;
+    appState.expensesPercent = ((sumExpenses * 100) / sumIncomes).toFixed(2);
     appState.balance = appState.incomeTotal - appState.expensesTotal;
 
     printBalances();
+    updateBalanceProgressBar();
 
     appState.transactions.forEach(trans => {
         addTransactionItem(trans, appState.incomeTotal);

@@ -1,0 +1,108 @@
+.transactions__item {
+    display: grid;
+    grid-template-columns: 1fr max-content max-content;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 1rem 2rem;
+    gap: 0 2rem;
+    border-radius: 5px;
+    // background-color: var(--secondary-color-dark);
+    // background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    position: relative;
+
+    // box-shadow: 0 .5rem 1rem #02020281;
+
+    &:not(:last-of-type) {
+        margin-bottom: 1rem;
+        border-bottom: 2px dotted var(--primary-color);
+    }
+
+    // &:hover {
+    //     background-color: #2b2a2a;
+    //     // background-color: #1c9b3c;
+    //     box-shadow: 0 1rem 1rem #02020281;
+    // }
+
+    &__name {
+        grid-column: 1 / 3;
+        grid-row: 1 / 1;
+        font-size: 2rem;
+        font-weight: 600;
+        color: var(--color-white);
+    }
+    
+    &__date {
+        grid-row: 2/3;
+        grid-column: 1/3;
+        font-size: 1.3rem;
+        color: var(--color-grey);
+        padding-top: .3rem;
+    }
+
+    &--description {
+        grid-row: 3 / 3;
+        grid-column: 1 / 3;
+        font-size: 1.6rem;
+        // color: #8f8c8c;
+        color: var(--color-white);
+    }
+
+    &__value {
+        grid-column: 2 / 3;
+        grid-row: 1 / -1;
+        align-self: center;
+        font-size: 2rem;
+        color: var(--color-white);
+    }
+
+    &--red {
+        color: var(--primary-color-red);
+    }
+
+    &__options {
+        position: absolute;
+        right: 0;
+        top: -1rem;
+        display: flex;
+        display: none;
+    }
+
+    &--edit,
+    &--delete {
+        padding: 0 .5rem;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+}
+
+.transactions__item-icon {
+    width: 3rem;
+    height: 3rem;
+    fill: var(--color-white);
+    transition: all .5s;
+
+    &--edit {
+        fill: var(--primary-color);
+    }
+
+    &--delete {
+        fill: var(--primary-color-red);
+    }
+
+    &--edit:hover {
+        transform: scale(1.3);
+    }
+
+    &--delete:hover {
+        transform: scale(1.3);
+    }
+}
+
+.income-color {
+    color: var(--primary-color);
+}

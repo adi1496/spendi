@@ -34,13 +34,24 @@ const userSchema = new mongoose.Schema({
         trim: true,
         lowercase: true,
         required: [true, 'Please provide your email'],
-        unique: true,
+        unique: [true, 'There is an account asociated with this email'],
         validate: {
             validator: function(currentEmail){
                 return validators.validateEmail(currentEmail);
             },
             message: "This not a valid e-mail"
         }
+    },
+
+    herotag: {
+        type: String,
+        lowercase: true,
+        unique: [true, 'This herotag already exists!'],
+    },
+
+    temporaryHerotag: {
+        type: Boolean,
+        default: true,
     },
 
     password: {
@@ -133,6 +144,13 @@ userSchema.pre('save', async function(next){
     this.confirmPassword = undefined;
     this.passwordChangedAt = Date.now() - 1000;
 
+    next();
+});
+
+// if the user is new create a temporary herotag
+userSchema.pre('save', function(next) {
+    if(this.isNew() === false) return next();
+    this.herotag = `${firstName}${Date.now()}`;
     next();
 });
 

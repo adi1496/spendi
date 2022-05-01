@@ -14,7 +14,7 @@
 }
 
 .heading-2 {
-    color: var(--color-white);
+    color: var(--primary-color);
     font-size: 3rem;
     font-weight: 600;
     margin-bottom: 3rem;
@@ -30,15 +30,18 @@
     margin: 2rem 0;
     padding: 1rem 0 1rem 3rem;
     color: var(--color-white);
+    text-align: center;
 }
 
 .heading-3__auth {
-    color: var(--primary-color-blue);
+    // color: var(--primary-color-blue);
+    color: var(--primary-color);
+    
 }
 
-.heading-3-blue {
-    // color: var(--primary-color-blue);
-    border-bottom: 2px solid var(--primary-color-blue);
+.heading-3__overview {
+
+    border-bottom: 2px solid var(--primary-color);
 }
 
 .heading-3-red {

@@ -1,6 +1,6 @@
 {
-  "name": "budget-app",
-  "version": "3.0.0",
+  "name": "spendi",
+  "version": "1.0.0",
   "description": "Track your money in a smart way",
   "main": "index.js",
   "scripts": {
