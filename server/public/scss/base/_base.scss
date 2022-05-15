@@ -33,6 +33,7 @@ $transaction-item-color: #160C28;
 
     --color-white: #ffffff;
     --color-grey: #d4d4d4;
+    --color-special1: #3E8914;
     
 
     // dynamic variables
@@ -81,6 +82,7 @@ body {
     // background-image: linear-gradient(to right, var(--primary-color-blue), #8a0101);
     background-color: var(--secondary-color);
     // background-image: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, 0.8));
+
 }
 
 input {

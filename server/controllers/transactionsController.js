@@ -36,7 +36,9 @@ exports.createNewTransaction = catchAsync(async(req, res, next) => {
     const newTransaction = await Transaction.create(transaction);
 
     console.log(newTransaction);
-    userController.checkUserTransactionsDates(req.user._id, newTransaction.year, newTransaction.month);
+    // check if user has transactions on this month of the year, if not add to array
+    // userController.checkUserTransactionsDates(req.user._id, newTransaction.year, newTransaction.month);
+    
 
     if(!newTransaction) return next(new AppError('Could not insert the transaction', 400));
 

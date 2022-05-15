@@ -1,7 +1,7 @@
 import { fetchPost } from "../utills/fetch.js";
 
 export const newAccountLinstener = async event => {
-    if(event.target.id === 'config-btn') configNewAccount();
+    if(event.id === 'config-btn') configNewAccount();
 }
 
 export const initNewAccountPage = () => {
@@ -14,7 +14,8 @@ const configNewAccount = async () => {
 
     const formData = new FormData(newUserForm)
     const body = {
-        baseCurrency: formData.get('curency')
+        baseCurrency: formData.get('curency'),
+        herotag: formData.get('herotag')
     }
 
     const response = await fetchPost('/api/v1/users/config-new-account', true, body);

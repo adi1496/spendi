@@ -5,10 +5,11 @@
     border: none;
     outline: none;
     font-family: inherit;
+    font-weight: 500;
     font-size: 1.7rem;
     border-radius: 5px;
     cursor: pointer;
-    background-color: #f0eeee;
+    background-color: var(--color-grey);
 }
 
 .new-btn:active {
@@ -17,12 +18,11 @@
 
 .cancel-btn {
     margin-right: 1rem;
+    // background-color: var(--primary-color-dark);
+    color: var(--secondary-color-light);
 }
 
 .add-btn {
-    background-color: var(--primary-color-blue);
-}
-
-.add-btn-red {
-    background-color: var(--primary-color-red);
+    background-color: var(--primary-color);
+    color: var(--secondary-color-light);
 }

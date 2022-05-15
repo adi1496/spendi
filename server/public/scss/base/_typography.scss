@@ -52,6 +52,8 @@
 
 .heading-4 {
     font-size: 4rem;
-    color: var(--color-inputs);
+    color: var(--primary-color);
     text-align: center;
+    text-shadow: 0 0 1rem var(--primary-color);
+    font-weight: 300;
 }

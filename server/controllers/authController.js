@@ -7,6 +7,7 @@ const User = require('./../models/userModel.js');
 
 exports.signUp = catchAsync(async (req, res, next) => {
     // assign only data that is needed from the body
+    console.log(req.body);
     const user = {
         firstName: req.body.firstName,
         lastName: req.body.lastName,

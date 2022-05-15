@@ -1,6 +1,6 @@
 import {transactionItem} from './ui-components/placeholders.js';
 import { camelCase } from '../utills/formatString.js';
-import { getDayName } from '../utills/formatDates.js';
+import { getDayName, getMonthName } from '../utills/formatDates.js';
 
 
 export const addTransactionItem = (transaction, incomeTotal) => {
@@ -33,7 +33,7 @@ export const addTransactionItem = (transaction, incomeTotal) => {
     }
     if(transaction.type === 'expense') {
         item = item.replace('%value%', `-${transaction.value}`);
-        item = item.replace(/%class-income%/g, '');
+        item = item.replace(/%class-income%/g, 'expense-color');
     }
 
     transactionsList.insertAdjacentHTML('afterbegin', item);
@@ -50,8 +50,11 @@ export const updateBalanceProgressBar = () => {
 
 
 export const printBalances = () => {
+    const currentMont = document.getElementById('current-month');
     const incomeCurrentMonth = document.querySelectorAll('#budget-month');
     const balanceCurrentMonth = document.getElementById('balance-value');
+
+    currentMont.textContent = `${getMonthName(appState.month)} ${appState.year}`;
 
     incomeCurrentMonth.forEach(el => {
         el.textContent = `${appState.incomeTotal} ${appState.user.baseCurrency}`;

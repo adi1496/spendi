@@ -3,17 +3,28 @@ import { updateNavBar, addTransactionItem, printBalances, updateBalanceProgressB
 
 export const dashboardListeners = (event) => {
     console.log(event);
-    if(event.id === 'income-btn' || event.id === 'cancel-popup-btn') 
-        document.getElementById('dark-screen-popup').classList.toggle('dark-screen--hidden');
+    switch (event.id) {
+        case 'show-add_btns':
+            const addBtnsContainer = document.getElementById('add-btns-container');
+            const showaddBtns = document.getElementById('show-add_btns');
 
-    if(event.id === 'nav-menu') {
-        const menuCont = document.getElementById('menu-container');
-        menuCont.classList.toggle('menu--visible');
-        if(menuCont.classList.value.split(' ').includes('menu--visible')) {
-            document.getElementById('nav-menu').classList.add('nav__menu--active');
-        }else {
-            document.getElementById('nav-menu').classList.remove('nav__menu--active');
-        }
+            showaddBtns.classList.toggle('add-transaction-btn--active');
+            addBtnsContainer.classList.toggle('add-fixed-div--hidden');
+            break;
+        
+        case 'income-btn':
+        case 'cancel-popup-btn':
+            document.getElementById('dark-screen-popup').classList.toggle('dark-screen--hidden');
+            break;
+        
+        case 'nav-menu':
+            const menuCont = document.getElementById('menu-container');
+            menuCont.classList.toggle('menu--visible');
+            if(menuCont.classList.value.split(' ').includes('menu--visible')) {
+                document.getElementById('nav-menu').classList.add('nav__menu--active');
+            }else {
+                document.getElementById('nav-menu').classList.remove('nav__menu--active');
+            }
     }
 }
 
@@ -45,9 +56,15 @@ export const initDasboard = async () => {
     });
 
     appState.transactions = response.transactions;
+    appState.month = getTransactionsOptions.month;
+    appState.year = getTransactionsOptions.year;
     appState.incomeTotal = sumIncomes;
     appState.expensesTotal = sumExpenses;
-    appState.expensesPercent = ((sumExpenses * 100) / sumIncomes).toFixed(2);
+    if(sumIncomes > 0){
+        appState.expensesPercent = ((sumExpenses * 100) / sumIncomes).toFixed(2);
+    }else {
+        appState.expensesPercent = 0;
+    }
     appState.balance = appState.incomeTotal - appState.expensesTotal;
 
     printBalances();

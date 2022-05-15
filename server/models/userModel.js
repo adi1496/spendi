@@ -46,7 +46,15 @@ const userSchema = new mongoose.Schema({
     herotag: {
         type: String,
         lowercase: true,
+        trim: true,
         unique: [true, 'This herotag already exists!'],
+        minlength: [2, "The herotag musht have at least 2 characters"],
+        validate: {
+            validator: function(el) {
+                return el.startsWith('@');
+            },
+            message: 'The herotag must begin with @'
+        }
     },
 
     temporaryHerotag: {
@@ -89,7 +97,11 @@ const userSchema = new mongoose.Schema({
         enum: ['$', 'RON', '€', '£']
     },
 
-    transactionsTimeline: [transactionYearsSchema],
+    transactionsTimeline: [
+        {
+            type: String
+        }
+    ],
 
     photo: String,
 
@@ -128,8 +140,8 @@ userSchema.pre('save', function(next) {
     if(this.isNew){
         this.accountCreatedAt = new Date(Date.now());
 
-        this.transactionsTimeline.push({year: this.accountCreatedAt.getFullYear(),
-                                    months: [this.accountCreatedAt.getMonth() + 1]});
+        this.transactionsTimeline.push(`${this.accountCreatedAt.getMonth() + 1}
+                                        -${this.accountCreatedAt.getFullYear()}`);
     }
 
     next();
@@ -149,8 +161,8 @@ userSchema.pre('save', async function(next){
 
 // if the user is new create a temporary herotag
 userSchema.pre('save', function(next) {
-    if(this.isNew() === false) return next();
-    this.herotag = `${firstName}${Date.now()}`;
+    if(this.isNew === false) return next();
+    this.herotag = `@${this.firstName}${Date.now()}`;
     next();
 });
 
@@ -160,6 +172,10 @@ userSchema.methods.comparePasswords = async function(candidatePassword){
 
 userSchema.methods.checkPasswordChangedAfter = function(jwtIssued) {
     return this.passwordChangedAt < jwtIssued * 1000;
+}
+
+userSchema.methods.checkAndUpdateUserTransactionsDates = function(monthYear) {
+    return this.transactionsTimeline.includes(monthYear);
 }
 
 const User = mongoose.model('User',userSchema);

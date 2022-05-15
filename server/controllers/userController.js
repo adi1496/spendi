@@ -38,7 +38,9 @@ exports.configNewAccount = catchAsync(async(req, res, next) => {
     user.baseCurrency = req.body.baseCurrency;
     user.configDone = true;
 
-    user.save({runValidators: true});
+    if(req.body.herotag) user.herotag = req.body.herotag;
+
+    await user.save({runValidators: true});
 
     console.log(user);
 
